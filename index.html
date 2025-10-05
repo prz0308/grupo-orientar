@@ -1,17 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Página Sencilla</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Grupo Orientar</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        background: url("./imagenes/01-Fondo-Pantalla-base-general.png")
+          no-repeat center center fixed;
+        background-size: cover;
+      }
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      header img {
+        width: 100px;
+        height: auto;
+      }
+      header h1 {
+        margin: 0 20px;
+        font-size: 2.5rem;
+        color: #f8f8f8;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+      .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 40px;
+      }
+      .menu-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+      .menu-item img {
+        width: 100px;
+        height: 60px;
+        object-fit: cover;
+      }
+      .contacto {
+        text-align: center;
+        margin: 40px auto;
+        font-size: 1.2rem;
+      }
+      .contacto div {
+        margin: 10px 0;
+      }
+      .contacto img {
+        width: 30px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      footer {
+        position: relative;
+        background: transparent;
+      }
+
+      footer img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      footer img.fondo {
+        position: relative;
+        z-index: 1;
+      }
+
+      footer img.texto {
+        position: absolute;
+        bottom: 10px;
+        z-index: 2;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <h1>¡Hola Mundo!</h1>
-      <p>Esta es una página HTML sencilla con CSS y JavaScript separados.</p>
-      <button id="miBoton">Haz clic aquí</button>
-    </div>
-    <script src="script.js"></script>
+    <header>
+      <img src="./imagenes/14-Logo-Grupo-Orientar-(chico).png" alt="Logo" />
+      <img src="./imagenes/13-Logo Grupo Orientar (grande).png" alt="Logo" />
+    </header>
+
+    <main>
+      <section class="menu">
+        <div class="menu-item">
+          <img
+            src="./imagenes/03-Boton-1-(URU-ON_LINE).png"
+            alt="Uru On-Line"
+          />
+          <span>URU ON-LINE</span>
+        </div>
+        <div class="menu-item">
+          <img
+            src="./imagenes/03-Boton-1-(URU-ON_LINE).png"
+            alt="Documentales"
+          />
+          <span>DOCUMENTALES</span>
+        </div>
+        <div class="menu-item">
+          <img src="./imagenes/03-Boton-1-(URU-ON_LINE).png" alt="Videoteca" />
+          <span>VIDEOTECA</span>
+        </div>
+        <div class="menu-item">
+          <img src="./imagenes/03-Boton-1-(URU-ON_LINE).png" alt="Filmes" />
+          <span>FILMES</span>
+        </div>
+        <div class="menu-item">
+          <img
+            src="./imagenes/03-Boton-1-(URU-ON_LINE).png"
+            alt="Info-Series"
+          />
+          <span>INFO-SERIES</span>
+        </div>
+      </section>
+
+      <section class="contacto">
+        <div>
+          <img src="./imagenes/15-Icono-WhatsApp.png" alt="WhatsApp" />(+598 96
+          884 448)
+        </div>
+        <div>
+          <img
+            src="./imagenes/16-Icono-e-mail.png"
+            alt="Email"
+          />grupo.orientar2019@gmail.com
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <img
+        class="fondo"
+        src="./imagenes/21-Banda-horizontal-inferior-(abajo).png"
+        alt="Footer fondo"
+      />
+      <img
+        class="texto"
+        src="./imagenes/22-Plataforma-Expansión-Conciencia.png"
+        alt="Footer texto"
+      />
+    </footer>
   </body>
 </html>

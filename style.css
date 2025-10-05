@@ -1,50 +1,130 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
-body {
-  font-family: "Arial", sans-serif;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.barra-superior,
+.barra-lateral,
+.barra-inferior,
+.imagen-inferior,
+.logo-grande,
+.logo-chico,
+.texto-uno,
+.texto-dos,
+.texto-tres,
+.texto-cuatro,
+.texto-cinco,
+.icono-wpp,
+.numero-wpp,
+.icono-email,
+.email,
+.bandera,
+.mapa,
+.imagen-inferior-uru,
+.texto-canal-dos,
+.texto-uruvision,
+.contactos,
+.videoteca,
+.texto-videoteca,
+.texto-documentales,
+.documentales {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-.container {
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+.gif {
+  position: fixed;
+  top: 23%;
+  left: 70%;
+  width: 30%;
+  height: auto;
+  z-index: 2;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-p {
-  margin-bottom: 30px;
-  font-size: 1.2rem;
-}
-
-button {
-  padding: 12px 25px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #ff7f50;
-  color: white;
+.boton-uno {
+  position: fixed;
+  top: 25%;
+  left: 9%;
+  width: 10%;
+  height: auto;
+  z-index: 2;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-button:hover {
-  background-color: #ff5722;
-  transform: scale(1.05);
+.boton-dos {
+  position: fixed;
+  top: 36%;
+  left: 9%;
+  width: 10%;
+  height: auto;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.boton-tres {
+  position: fixed;
+  top: 47%;
+  left: 9%;
+  width: 10%;
+  height: auto;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.boton-cuatro {
+  position: fixed;
+  top: 59%;
+  left: 9%;
+  width: 10%;
+  height: auto;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.boton-cinco {
+  position: fixed;
+  top: 70%;
+  left: 9%;
+  width: 10%;
+  height: auto;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.boton-uruvision {
+  position: fixed;
+  top: 13%;
+  left: 55%;
+  width: 28%;
+  height: auto;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.boton-canal-dos {
+  position: fixed;
+  top: 45%;
+  left: 55%;
+  width: 28%;
+  height: auto;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.boton-uno:hover,
+.boton-dos:hover,
+.boton-tres:hover,
+.boton-cuatro:hover,
+.boton-uruvision:hover,
+.boton-canal-dos:hover,
+.boton-cinco:hover {
+  transform: scale(1.1);
 }

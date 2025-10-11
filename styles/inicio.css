@@ -1,0 +1,61 @@
+.boton-inicio-uno {
+  position: absolute;
+  width: 13%;
+  height: auto;
+  top: 32%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.boton-inicio-dos {
+  position: absolute;
+  width: 13%;
+  height: auto;
+  top: 43%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.boton-inicio-tres {
+  position: absolute;
+  width: 13%;
+  height: auto;
+  top: 54%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.boton-inicio-cuatro {
+  position: absolute;
+  width: 13%;
+  height: auto;
+  top: 65%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.boton-inicio-cinco {
+  position: absolute;
+  width: 13%;
+  height: auto;
+  top: 77%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.gif {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  top: 47%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+}
+
+.boton-inicio-uno:hover,
+.boton-inicio-dos:hover,
+.boton-inicio-tres:hover,
+.boton-inicio-cuatro:hover,
+.boton-inicio-cinco:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}

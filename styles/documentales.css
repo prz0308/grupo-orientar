@@ -1,0 +1,121 @@
+.videos-column {
+  position: absolute;
+  top: 9%;
+  right: 7%;
+  width: 20%;
+  height: 91%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+  padding-right: 20px;
+  z-index: 10;
+}
+
+.videos-column::-webkit-scrollbar {
+  width: 26px;
+}
+
+.videos-column::-webkit-scrollbar-track {
+  background: #8fafd9;
+  border-radius: 6px;
+  border: 3px solid #efca95;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  margin: 0 0 26px 0;
+}
+
+.videos-column::-webkit-scrollbar-thumb {
+  background: #5da3f7;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: padding-box;
+  margin: 20px 0;
+
+  box-shadow: inset 2px 2px 0 #405b8a, inset -2px -2px 0 #202e46;
+}
+
+.video-item {
+  position: relative;
+  aspect-ratio: 16/9;
+}
+
+.video-item-marco {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.video-item-miniatura {
+  position: absolute;
+  top: 6%;
+  left: 3.5%;
+  width: 82.5%;
+  height: 80%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 3px;
+}
+
+.main-display {
+  position: absolute;
+  width: 66.1%;
+  height: 66.1%;
+  top: 42.8%;
+  left: 35.2%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.main-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.custom-controls {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.custom-timebar {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00bfff, #007bff);
+  border-radius: 4px;
+  transition: width 0.1s linear;
+}
+
+.time-info {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: monospace;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 3px 8px;
+  border-radius: 6px;
+}

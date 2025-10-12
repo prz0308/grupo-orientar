@@ -68,20 +68,26 @@
   left: 35.2%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  cursor: pointer;
+  background-color: black;
+  border-radius: 12px;
 }
 
-.main-display img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 20;
 }
 
 .custom-controls {
   position: absolute;
   top: 80%;
-  left: 10%;
+  left: 35%;
   transform: translate(-50%, -50%);
   z-index: 100;
   cursor: pointer;
@@ -89,14 +95,18 @@
 
 .custom-timebar {
   position: absolute;
-  bottom: 7%;
-  left: 50%;
+  bottom: 3%;
+  left: 46%;
   transform: translateX(-50%);
-  width: 80%;
+  width: 90%;
   height: 6px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   overflow: hidden;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .progress-bar {
@@ -109,13 +119,33 @@
 
 .time-info {
   position: absolute;
-  bottom: 3%;
-  left: 50%;
+  bottom: 2%;
+  left: 95.5%;
   transform: translateX(-50%);
   color: white;
   font-family: monospace;
   font-size: 14px;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 3px 8px;
-  border-radius: 6px;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.main-display:hover .custom-timebar,
+.main-display:hover .time-info {
+  opacity: 1;
+  pointer-events: auto;
+  transition-duration: 0.3s;
+}
+
+.main-display:not(:hover) .custom-timebar,
+.main-display:not(:hover) .time-info {
+  transition-duration: 2s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#player {
+  border-radius: 12px; /* ajustá el valor al que quieras */
+  overflow: hidden; /* importante para que los bordes redondeados funcionen bien */
 }

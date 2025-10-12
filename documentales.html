@@ -75,11 +75,6 @@
         class="full"
       />-->
       <div class="main-display">
-        <!--<img
-          src="./imagenes/documentales/57-Foto Base Fondo Web Documentales.png"
-          alt="Imagen grande"
-          id="main-image"
-        />-->
         <video id="player" autoplay width="100%" height="100%">
           <source
             src="./videos/documentales/293788_small.mp4"
@@ -87,15 +82,15 @@
           />
           Tu navegador no soporta la reproducción de video.
         </video>
+        <div class="play-overlay" id="play-overlay">▶️</div>
+        <div class="custom-timebar">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <div class="time-info time-info-total">
+          <span id="total-time">00:00:00</span>
+        </div>
       </div>
 
-      <div class="custom-timebar">
-        <div id="progress-bar" class="progress-bar"></div>
-      </div>
-      <div class="time-info">
-        <span id="current-time">00:00</span> /
-        <span id="total-time">00:00</span>
-      </div>
       <div class="custom-controls">
         <button onclick="rewindVideo()">⏪ -5s</button>
         <button onclick="playVideo()">▶️ Play</button>
@@ -103,7 +98,9 @@
         <button onclick="stopVideo()">⏹️ Stop</button>
         <button onclick="restartVideo()">🔁 Reiniciar</button>
         <button onclick="forwardVideo()">⏩ +5s</button>
+        <button onclick="toggleFullscreen()">⛶ Pantalla completa</button>
       </div>
+
       <div class="videos-column">
         <div class="video-item">
           <img

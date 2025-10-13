@@ -62,6 +62,23 @@ updatePlayOverlay();
 currentVideo.addEventListener("play", updatePlayOverlay);
 currentVideo.addEventListener("pause", updatePlayOverlay);
 
+currentVideo.addEventListener("dblclick", () => {
+  toggleFullscreen();
+});
+
+// Tecla espacio para play/pause
+document.addEventListener("keydown", (e) => {
+  // Evitar que la página haga scroll con espacio
+  if (e.code === "Space") {
+    e.preventDefault();
+    if (currentVideo.paused) {
+      currentVideo.play();
+    } else {
+      currentVideo.pause();
+    }
+  }
+});
+
 // Funciones de control
 function getVideo() {
   return currentVideo;
@@ -146,3 +163,103 @@ function toggleFullscreen() {
     }
   }
 }
+
+const progressTooltip = document.createElement("div");
+progressTooltip.className = "progress-tooltip";
+progressTooltip.textContent = "00:00:00";
+document.body.appendChild(progressTooltip);
+
+const progressBarContainer = document.querySelector(".custom-timebar");
+
+progressBarContainer.addEventListener("mousemove", (e) => {
+  const rect = progressBarContainer.getBoundingClientRect();
+  const offsetX = e.clientX - rect.left;
+  const ratio = offsetX / rect.width;
+  const hoverTime = ratio * currentVideo.duration;
+
+  // Formatear como hh:mm:ss
+  const hrs = Math.floor(hoverTime / 3600);
+  const mins = Math.floor((hoverTime % 3600) / 60);
+  const secs = Math.floor(hoverTime % 60);
+  progressTooltip.textContent = `${String(hrs).padStart(2, "0")}:${String(
+    mins
+  ).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+
+  // Posición relativa al body
+  progressTooltip.style.left = `${e.pageX}px`;
+  progressTooltip.style.top = `${rect.top + window.scrollY - 20}px`; // 20px arriba de la barra
+  progressTooltip.style.opacity = 1;
+});
+
+progressBarContainer.addEventListener("mouseleave", () => {
+  progressTooltip.style.opacity = 0;
+});
+
+function adjustProgressBarForFullscreen() {
+  const timeBar = document.querySelector(".custom-timebar");
+  const timeNumber = document.querySelector(".time-info");
+
+  if (document.fullscreenElement) {
+    // En pantalla completa, hacemos la barra más larga
+    timeBar.style.width = "93%"; // ajustá al tamaño deseado
+    timeBar.style.left = "48%";
+    timeBar.style.transform = "translateX(-50%)";
+    timeNumber.style.bottom = "2.4%";
+    timeNumber.style.left = "97.3%";
+    timeNumber.style.transform = "translateX(-50%)";
+  } else {
+    // Cuando no está en fullscreen, volvemos al tamaño normal
+    timeBar.style.width = "90%";
+    timeBar.style.left = "46%";
+    timeBar.style.transform = "translateX(-50%)";
+    timeNumber.style.bottom = "2%";
+    timeNumber.style.left = "95.5%";
+    timeNumber.style.transform = "translateX(-50%)";
+  }
+}
+
+// Escuchamos cambios de fullscreen
+document.addEventListener("fullscreenchange", adjustProgressBarForFullscreen);
+document.addEventListener(
+  "webkitfullscreenchange",
+  adjustProgressBarForFullscreen
+);
+document.addEventListener(
+  "mozfullscreenchange",
+  adjustProgressBarForFullscreen
+);
+document.addEventListener("MSFullscreenChange", adjustProgressBarForFullscreen);
+
+// Llamada inicial por si ya estaba en fullscreen
+adjustProgressBarForFullscreen();
+
+let hideTimeout;
+
+function showControls() {
+  const timeBar = document.querySelector(".custom-timebar");
+  const timeNumber = document.querySelector(".time-info");
+
+  // Mostramos los controles
+  timeBar.style.opacity = 1;
+  timeBar.style.pointerEvents = "auto";
+  timeNumber.style.opacity = 1;
+  timeNumber.style.pointerEvents = "auto";
+
+  // Limpiamos cualquier timeout previo
+  clearTimeout(hideTimeout);
+
+  // Ocultamos controles tras 3 segundos de inactividad
+  hideTimeout = setTimeout(() => {
+    timeBar.style.opacity = 0;
+    timeBar.style.pointerEvents = "none";
+    timeNumber.style.opacity = 0;
+    timeNumber.style.pointerEvents = "none";
+  }, 2000);
+}
+
+// Mousemove en todo el mainDisplay
+const mainDisplay = document.querySelector(".main-display");
+mainDisplay.addEventListener("mousemove", showControls);
+
+// Llamada inicial para que aparezcan al cargar
+showControls();

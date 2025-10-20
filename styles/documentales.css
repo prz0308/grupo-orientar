@@ -134,14 +134,23 @@
 
 .time-info {
   position: absolute;
-  bottom: 2%;
-  left: 95.5%;
-  transform: translateX(-50%);
   color: white;
   font-family: monospace;
   font-size: 14px;
   z-index: 10;
   opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.fullscreen {
+  position: absolute;
+  color: white;
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 14px;
+  z-index: 10;
+  opacity: 1;
   transition: opacity 0.3s ease;
   pointer-events: none;
 }

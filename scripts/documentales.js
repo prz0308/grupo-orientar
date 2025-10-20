@@ -98,13 +98,35 @@ function restartVideo() {
   currentVideo.play();
 }
 function forwardVideo() {
-  currentVideo.currentTime = Math.min(
-    currentVideo.currentTime + 5,
-    currentVideo.duration
+  const miniaturas = Array.from(
+    document.querySelectorAll(".video-item-miniatura")
   );
+  const currentFile = currentVideo.src.split("/").pop();
+  const currentIndex = miniaturas.findIndex(
+    (m) => m.dataset.video.split("/").pop() === currentFile
+  );
+
+  let nextIndex = currentIndex + 1;
+
+  if (miniaturas[nextIndex]) {
+    showVideo(miniaturas[nextIndex]);
+  }
 }
+
 function rewindVideo() {
-  currentVideo.currentTime = Math.max(currentVideo.currentTime - 5, 0);
+  const miniaturas = Array.from(
+    document.querySelectorAll(".video-item-miniatura")
+  );
+  const currentFile = currentVideo.src.split("/").pop();
+  const currentIndex = miniaturas.findIndex(
+    (m) => m.dataset.video.split("/").pop() === currentFile
+  );
+
+  let prevIndex = currentIndex - 1;
+
+  if (miniaturas[prevIndex]) {
+    showVideo(miniaturas[prevIndex]);
+  }
 }
 
 // Barra de progreso
@@ -142,6 +164,7 @@ function showVideo(miniatura) {
 
 function toggleFullscreen() {
   const videoContainer = document.querySelector(".main-display");
+  const icon = document.getElementById("fullscreen-icon");
 
   if (!document.fullscreenElement) {
     // Pedimos pantalla completa
@@ -152,6 +175,7 @@ function toggleFullscreen() {
     } else if (videoContainer.msRequestFullscreen) {
       videoContainer.msRequestFullscreen();
     }
+    if (icon) icon.textContent = "⛶";
   } else {
     // Salimos de pantalla completa
     if (document.exitFullscreen) {
@@ -161,6 +185,7 @@ function toggleFullscreen() {
     } else if (document.msExitFullscreen) {
       document.msExitFullscreen();
     }
+    if (icon) icon.textContent = "⛶";
   }
 }
 
@@ -198,23 +223,30 @@ progressBarContainer.addEventListener("mouseleave", () => {
 function adjustProgressBarForFullscreen() {
   const timeBar = document.querySelector(".custom-timebar");
   const timeNumber = document.querySelector(".time-info");
+  const fullscreen = document.querySelector(".fullscreen");
 
   if (document.fullscreenElement) {
     // En pantalla completa, hacemos la barra más larga
-    timeBar.style.width = "93%"; // ajustá al tamaño deseado
-    timeBar.style.left = "48%";
+    timeBar.style.width = "91%"; // ajustá al tamaño deseado
+    timeBar.style.left = "46.5%";
     timeBar.style.transform = "translateX(-50%)";
     timeNumber.style.bottom = "2.4%";
-    timeNumber.style.left = "97.3%";
+    timeNumber.style.left = "95%";
     timeNumber.style.transform = "translateX(-50%)";
+    fullscreen.style.bottom = "2.4%";
+    fullscreen.style.left = "98.5%";
+    fullscreen.style.transform = "translateX(-50%)";
   } else {
     // Cuando no está en fullscreen, volvemos al tamaño normal
-    timeBar.style.width = "90%";
-    timeBar.style.left = "46%";
+    timeBar.style.width = "86%";
+    timeBar.style.left = "44%";
     timeBar.style.transform = "translateX(-50%)";
     timeNumber.style.bottom = "2%";
-    timeNumber.style.left = "95.5%";
+    timeNumber.style.left = "92.5%";
     timeNumber.style.transform = "translateX(-50%)";
+    fullscreen.style.bottom = "2%";
+    fullscreen.style.left = "98%";
+    fullscreen.style.transform = "translateX(-50%)";
   }
 }
 
@@ -238,12 +270,15 @@ let hideTimeout;
 function showControls() {
   const timeBar = document.querySelector(".custom-timebar");
   const timeNumber = document.querySelector(".time-info");
+  const fullscreen = document.querySelector(".fullscreen");
 
   // Mostramos los controles
   timeBar.style.opacity = 1;
   timeBar.style.pointerEvents = "auto";
   timeNumber.style.opacity = 1;
   timeNumber.style.pointerEvents = "auto";
+  fullscreen.style.opacity = 1;
+  fullscreen.style.pointerEvents = "auto";
 
   // Limpiamos cualquier timeout previo
   clearTimeout(hideTimeout);
@@ -254,6 +289,8 @@ function showControls() {
     timeBar.style.pointerEvents = "none";
     timeNumber.style.opacity = 0;
     timeNumber.style.pointerEvents = "none";
+    fullscreen.style.opacity = 0;
+    fullscreen.style.pointerEvents = "none";
   }, 2000);
 }
 

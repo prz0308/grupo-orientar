@@ -6,13 +6,11 @@
   height: 91%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   overflow-y: scroll;
-  padding-right: 20px;
   z-index: 10;
 }
 
-.videos-column::-webkit-scrollbar {
+/*.videos-column::-webkit-scrollbar {
   width: 26px;
 }
 
@@ -30,9 +28,23 @@
   border: 4px solid transparent;
   background-clip: padding-box;
   margin: 20px 0;
-
   box-shadow: inset 2px 2px 0 #405b8a, inset -2px -2px 0 #202e46;
 }
+
+@media (max-width: 480px) {
+  .videos-column::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .videos-column::-webkit-scrollbar-track {
+    box-shadow: none;
+  }
+
+  .videos-column::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    box-shadow: none;
+  }
+}*/
 
 .video-item {
   position: relative;
@@ -69,7 +81,7 @@
   transform: translate(-50%, -50%);
   z-index: 10;
   background-color: black;
-  border-radius: 12px;
+  border-radius: 2%;
 }
 
 .play-overlay {
@@ -82,6 +94,18 @@
   pointer-events: none;
   opacity: 0;
   z-index: 20;
+}
+
+@media (max-width: 768px) {
+  .play-overlay {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .play-overlay {
+    font-size: 1rem;
+  }
 }
 
 .custom-controls {
@@ -155,7 +179,76 @@
   pointer-events: none;
 }
 
+.boton-stop {
+  position: absolute;
+  width: 2.5%;
+  height: auto;
+  top: 79.5%;
+  left: 26.3%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.boton-anterior {
+  position: absolute;
+  width: 2.7%;
+  height: auto;
+  top: 79.52%;
+  left: 29.3%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.boton-pausa {
+  position: absolute;
+  width: 4.2%;
+  height: auto;
+  top: 79.52%;
+  left: 32.5%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.boton-play {
+  position: absolute;
+  width: 4%;
+  height: auto;
+  top: 79.6%;
+  left: 36.5%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.boton-repetir {
+  position: absolute;
+  width: 3.7%;
+  height: auto;
+  top: 79.6%;
+  left: 40.5%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.boton-siguiente {
+  position: absolute;
+  width: 2.7%;
+  height: auto;
+  top: 79.52%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.boton-stop:hover,
+.boton-anterior:hover,
+.boton-pausa:hover,
+.boton-play:hover,
+.boton-repetir:hover,
+.boton-siguiente:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
 #player {
-  border-radius: 12px;
+  border-radius: 2%;
   overflow: hidden;
 }

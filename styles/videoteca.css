@@ -1,0 +1,42 @@
+.titulos-column {
+  position: absolute;
+  top: 30.3%;
+  right: 14.2%;
+  width: 23%;
+  height: 44%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  z-index: 10;
+  gap: 0.8%;
+  padding-right: 2.5%;
+  box-sizing: border-box;
+}
+
+.titulo-item {
+  position: relative;
+  flex: 0 0 auto;
+  aspect-ratio: 6 / 1;
+  cursor: pointer;
+}
+
+.titulo-item-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.titulo-item-texto {
+  position: absolute;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1vw;
+  font-family: sans-serif;
+  top: 30%;
+  left: 8%;
+  z-index: 1;
+}

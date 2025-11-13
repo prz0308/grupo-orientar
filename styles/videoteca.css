@@ -1,9 +1,9 @@
-.titulos-column {
+/*.titulos-column {
   position: absolute;
-  top: 30.3%;
+  top: 28.3%;
   right: 14.2%;
   width: 23%;
-  height: 44%;
+  height: 48.3%;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
@@ -39,4 +39,50 @@
   top: 30%;
   left: 8%;
   z-index: 1;
+}*/
+
+.titulos-column {
+  position: absolute;
+  top: 28.3%;
+  right: 7%;
+  width: 23%;
+  height: 48.3%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  z-index: 10;
+  padding-right: 5%;
 }
+
+.titulo-item {
+  position: relative;
+  /*flex: 0 0 auto;*/
+  aspect-ratio: 6 / 1;
+  cursor: pointer;
+}
+
+.titulo-item-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 122%;
+  /*object-fit: cover;
+  z-index: 0;*/
+}
+
+.titulo-item-fondo:hover {
+  transform: scale(1.02);
+}
+
+/*.titulo-item-texto {
+  position: absolute;
+  top: 6%;
+  left: 3.5%;
+  width: 82.5%;
+  height: 80%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 3px;
+  cursor: pointer;
+}*/

@@ -123,4 +123,10 @@
 #player {
   border-radius: 2%;
   overflow: hidden;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+#player.fading {
+  opacity: 0;
 }

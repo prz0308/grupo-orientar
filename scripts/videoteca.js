@@ -128,9 +128,13 @@ function cargarVideosRelacionados(videos) {
   activarClicksMiniaturas();
 
   if (videos && videos.length > 0) {
-    indiceVideoActual = 0;
-    videoSource.src = videos[0].video;
-    videoPlayer.load();
+    videoPlayer.classList.add("fading");
+
+    setTimeout(() => {
+      videoSource.src = videos[0].video;
+      videoPlayer.load();
+      videoPlayer.classList.remove("fading");
+    }, 500);
   }
 }
 
@@ -141,11 +145,13 @@ function activarClicksMiniaturas() {
   document.querySelectorAll("[data-video]").forEach((mini) => {
     mini.addEventListener("click", () => {
       const url = mini.dataset.video;
-      indiceVideoActual = parseInt(mini.dataset.index);
+      videoPlayer.classList.add("fading");
 
-      videoSource.src = url;
-      videoPlayer.load();
-      videoPlayer.play();
+      setTimeout(() => {
+        videoSource.src = url;
+        videoPlayer.load();
+        videoPlayer.classList.remove("fading");
+      }, 500);
     });
   });
 }
@@ -174,9 +180,13 @@ function siguienteVideo() {
   const lista = data[tituloActual];
   indiceVideoActual = (indiceVideoActual + 1) % lista.length;
 
-  videoSource.src = lista[indiceVideoActual].video;
-  videoPlayer.load();
-  videoPlayer.play();
+  videoPlayer.classList.add("fading");
+
+  setTimeout(() => {
+    videoSource.src = lista[indiceVideoActual].video;
+    videoPlayer.load();
+    videoPlayer.classList.remove("fading");
+  }, 500);
 }
 
 function anteriorVideo() {
@@ -185,9 +195,13 @@ function anteriorVideo() {
   const lista = data[tituloActual];
   indiceVideoActual = (indiceVideoActual - 1 + lista.length) % lista.length;
 
-  videoSource.src = lista[indiceVideoActual].video;
-  videoPlayer.load();
-  videoPlayer.play();
+  videoPlayer.classList.add("fading");
+
+  setTimeout(() => {
+    videoSource.src = lista[indiceVideoActual].video;
+    videoPlayer.load();
+    videoPlayer.classList.remove("fading");
+  }, 500);
 }
 
 // -------------------------------------------------------------

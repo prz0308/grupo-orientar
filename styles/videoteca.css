@@ -100,6 +100,12 @@
 #videoplayer {
   border-radius: 2.5%;
   overflow: hidden;
+  transition: opacity 0.4s ease;
+  opacity: 1;
+}
+
+#videoplayer.fading {
+  opacity: 0;
 }
 
 .boton-stop {

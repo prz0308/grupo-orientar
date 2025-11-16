@@ -64,8 +64,13 @@ function activarClicks() {
 }
 
 function cargarVideo(index) {
-  source.src = documentales[index].video;
-  player.load();
+  player.classList.add("fading");
+  setTimeout(() => {
+    source.src = documentales[index].video;
+    player.load();
+    void player.offsetWidth;
+    player.classList.remove("fading");
+  }, 500);
 }
 
 function marcarSeleccionado(i) {

@@ -59,3 +59,48 @@
 .boton-inicio-cinco:hover {
   transform: translate(-50%, -50%) scale(1.1);
 }
+
+.texto-inicio-uno {
+  position: absolute;
+  width: 13%;
+  height: auto;
+  top: 32%;
+  left: 27.3%;
+  transform: translate(-50%, -50%);
+}
+
+.texto-inicio-dos {
+  position: absolute;
+  width: 16%;
+  height: auto;
+  top: 43%;
+  left: 28.7%;
+  transform: translate(-50%, -50%);
+}
+
+.texto-inicio-tres {
+  position: absolute;
+  width: 12%;
+  height: auto;
+  top: 54%;
+  left: 27%;
+  transform: translate(-50%, -50%);
+}
+
+.texto-inicio-cuatro {
+  position: absolute;
+  width: 8%;
+  height: auto;
+  top: 65.6%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.texto-inicio-cinco {
+  position: absolute;
+  width: 13%;
+  height: auto;
+  top: 77.5%;
+  left: 27.5%;
+  transform: translate(-50%, -50%);
+}

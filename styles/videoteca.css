@@ -51,30 +51,129 @@
   position: absolute;
   top: 8%;
   left: 10%;
-  width: 100%;
-  height: 50%;
+  width: 40%;
+  height: 17%;
   display: flex;
   flex-direction: column;
+  gap: 5%;
+  overflow-y: auto;
   z-index: 10;
 }
 
-.boton-de-muestra {
-  position: absolute;
-  top: 5%;
-  left: 28%;
-  width: 9%;
-  height: auto;
-  cursor: pointer;
-  z-index: 10;
+.titulo-miniatura-boton {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .boton-de-muestra-titulo {
-  position: absolute;
-  width: 27%;
+  position: relative;
+  width: 65%;
   height: auto;
-  z-index: 10;
+  padding-right: 5%;
+}
+
+.boton-de-muestra {
+  position: relative;
+  width: 24%;
+  height: auto;
+  cursor: pointer;
 }
 
 .boton-de-muestra:hover {
   transform: scale(1.05);
+}
+
+.main-display {
+  position: absolute;
+  width: 56%;
+  height: 55.7%;
+  top: 55.5%;
+  left: 29.6%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: black;
+  border-radius: 1.5%;
+}
+
+#videoplayer {
+  border-radius: 2.5%;
+  overflow: hidden;
+}
+
+.boton-stop {
+  position: absolute;
+  width: 2.5%;
+  height: auto;
+  top: 87%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.boton-anterior {
+  position: absolute;
+  width: 2.7%;
+  height: auto;
+  top: 87.1%;
+  left: 24.4%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.boton-pausa {
+  position: absolute;
+  width: 3.8%;
+  height: auto;
+  top: 87%;
+  left: 27.3%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.boton-play {
+  position: absolute;
+  width: 3.8%;
+  height: auto;
+  top: 87%;
+  left: 30.7%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.boton-repetir {
+  position: absolute;
+  width: 3.7%;
+  height: auto;
+  top: 87%;
+  left: 34.2%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.boton-siguiente {
+  position: absolute;
+  width: 2.7%;
+  height: auto;
+  top: 87%;
+  left: 37.2%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.boton-stop:hover,
+.boton-anterior:hover,
+.boton-pausa:hover,
+.boton-play:hover,
+.boton-repetir:hover,
+.boton-siguiente:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.titulo-item.selected .titulo-item-texto {
+  transform: scale(1.05);
+  font-weight: bold;
+  color: #ffd700;
+  transition: 0.2s ease;
 }

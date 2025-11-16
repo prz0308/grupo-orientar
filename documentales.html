@@ -34,11 +34,6 @@
         alt="Logo Chico"
         class="full"
       />
-      <!--<img
-        src="./imagenes/documentales/67-Accesorio-Base-Banda-Deslizable-Web-Documentales.png"
-        alt="Logo Chico"
-        class="full"
-      />-->
       <img
         src="./imagenes/documentales/60-Texto Inferior (Plataforma..) Web Documentales.png"
         alt="Texto Documentales"
@@ -54,6 +49,7 @@
         alt="Documentales"
         class="full"
       />
+
       <img
         src="./imagenes/documentales/72-Botonera stop documental.png"
         alt="Documentales"
@@ -64,6 +60,7 @@
         src="./imagenes/documentales/73-Botonera documental anterior.png"
         alt="Documentales"
         class="boton-anterior"
+        onclick="anteriorVideo()"
       />
       <img
         src="./imagenes/documentales/74-Botonera pausa.png"
@@ -87,134 +84,20 @@
         src="./imagenes/documentales/77-Botonera documental siguiente.png"
         alt="Documentales"
         class="boton-siguiente"
+        onclick="siguienteVideo()"
       />
-      <!--<img
-        src="./imagenes/documentales/67-Accesorio Base Banda Deslizable Web Documentales.png"
-        alt="Documentales"
-        class="full"
-      />
-      <img
-        src="./imagenes/documentales/68-Botón (abajo) Base Banda Deslizable Web Documentales.png"
-        alt="Documentales"
-        class="full"
-      />
-      <img
-        src="./imagenes/documentales/69-Botón (arriba) Base Banda Deslizable Web Documentales.png"
-        alt="Documentales"
-        class="full"
-      />
-      <img
-        src="./imagenes/documentales/70-Botón Perilla Base Banda Deslizable Web Documentales.png"
-        alt="Documentales"
-        class="full"
-      />-->
+
       <div class="main-display">
-        <video id="player" autoplay width="100%" height="100%">
+        <video id="player" autoplay width="100%" height="100%" controls>
           <source
             src="./videos/documentales/293788_small.mp4"
             type="video/mp4"
           />
           Tu navegador no soporta la reproducción de video.
         </video>
-        <div class="play-overlay" id="play-overlay">▶️</div>
-        <div class="custom-timebar">
-          <div id="progress-bar" class="progress-bar"></div>
-          <div class="progress-tooltip" id="progress-tooltip">00:00:00</div>
-        </div>
-        <div class="time-info">
-          <span id="total-time">00:00:00</span>
-        </div>
-        <div class="fullscreen">
-          <span id="fullscreen-icon" onclick="toggleFullscreen()">⛶</span>
-        </div>
       </div>
 
-      <div class="videos-column">
-        <div class="video-item">
-          <img
-            src="./imagenes/documentales/63-Solo Muestra Marcos Miniaturas Web Documentales (hay estructura aparte pronta).png"
-            alt="Marco"
-            class="video-item-marco"
-          />
-          <img
-            src="./imagenes/documentales/miniatura2.png"
-            alt="Miniatura"
-            class="video-item-miniatura"
-            data-video="./videos/documentales/293788_small.mp4"
-            onclick="showVideo(this)"
-          />
-        </div>
-        <div class="video-item">
-          <img
-            src="./imagenes/documentales/63-Solo Muestra Marcos Miniaturas Web Documentales (hay estructura aparte pronta).png"
-            alt="Marco"
-            class="video-item-marco"
-          />
-          <img
-            src="./imagenes/documentales/miniatura1.png"
-            alt="Miniatura"
-            class="video-item-miniatura"
-            data-video="./videos/documentales/304330_small.mp4"
-            onclick="showVideo(this)"
-          />
-        </div>
-        <div class="video-item">
-          <img
-            src="./imagenes/documentales/63-Solo Muestra Marcos Miniaturas Web Documentales (hay estructura aparte pronta).png"
-            alt="Marco"
-            class="video-item-marco"
-          />
-          <img
-            src="./imagenes/documentales/miniatura2.png"
-            alt="Miniatura"
-            class="video-item-miniatura"
-            data-video="./videos/documentales/236711_small.mp4"
-            onclick="showVideo(this)"
-          />
-        </div>
-        <div class="video-item">
-          <img
-            src="./imagenes/documentales/63-Solo Muestra Marcos Miniaturas Web Documentales (hay estructura aparte pronta).png"
-            alt="Marco"
-            class="video-item-marco"
-          />
-          <img
-            src="./imagenes/documentales/miniatura1.png"
-            alt="Miniatura"
-            class="video-item-miniatura"
-            data-video="./videos/documentales/152085-802335503_small.mp4"
-            onclick="showVideo(this)"
-          />
-        </div>
-        <div class="video-item">
-          <img
-            src="./imagenes/documentales/63-Solo Muestra Marcos Miniaturas Web Documentales (hay estructura aparte pronta).png"
-            alt="Marco"
-            class="video-item-marco"
-          />
-          <img
-            src="./imagenes/documentales/miniatura2.png"
-            alt="Miniatura"
-            class="video-item-miniatura"
-            data-video="./videos/documentales/304330_small.mp4"
-            onclick="showVideo(this)"
-          />
-        </div>
-        <div class="video-item">
-          <img
-            src="./imagenes/documentales/63-Solo Muestra Marcos Miniaturas Web Documentales (hay estructura aparte pronta).png"
-            alt="Marco"
-            class="video-item-marco"
-          />
-          <img
-            src="./imagenes/documentales/miniatura1.png"
-            alt="Miniatura"
-            class="video-item-miniatura"
-            data-video="./videos/documentales/293788_small.mp4"
-            onclick="showVideo(this)"
-          />
-        </div>
-      </div>
+      <div class="videos-column"></div>
     </div>
 
     <script src="./scripts/documentales.js"></script>

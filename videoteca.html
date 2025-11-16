@@ -64,176 +64,51 @@
         alt="Videoteca"
         class="full"
       />
+
       <img
         src="./imagenes/videoteca/(Videoteca) pausa.png"
-        alt="Videoteca"
-        class="full"
+        class="boton-pausa"
+        onclick="pauseVideo()"
       />
       <img
         src="./imagenes/videoteca/(Videoteca) play.png"
-        alt="Videoteca"
-        class="full"
+        class="boton-play"
+        onclick="playVideo()"
       />
       <img
         src="./imagenes/videoteca/(Videoteca) reproducir desde el principio.png"
-        alt="Videoteca"
-        class="full"
+        class="boton-repetir"
+        onclick="restartVideo()"
       />
       <img
         src="./imagenes/videoteca/(Videoteca) stop.png"
-        alt="Videoteca"
-        class="full"
+        class="boton-stop"
+        onclick="stopVideo()"
       />
       <img
         src="./imagenes/videoteca/(Videoteca) video anterior.png"
-        alt="Videoteca"
-        class="full"
+        class="boton-anterior"
+        onclick="anteriorVideo()"
       />
       <img
         src="./imagenes/videoteca/(Videoteca) video siguiente.png"
-        alt="Videoteca"
-        class="full"
+        class="boton-siguiente"
+        onclick="siguienteVideo()"
       />
+
+      <div class="main-display">
+        <video id="videoplayer" width="100%" controls>
+          <source id="video-source" src="" type="video/mp4" />
+        </video>
+      </div>
+
       <div class="titulo-miniatura-boton-column">
-        <div class="titulo-miniatura-boton">
-          <img
-            src="./imagenes/videoteca/(Videoteca) Botón de Muestra con título 1.png"
-            alt="Videoteca"
-            class="boton-de-muestra-titulo"
-          />
-          <img
-            src="./imagenes/videoteca/(Videoteca) Botón de Muestra 1.png"
-            alt="Videoteca"
-            class="boton-de-muestra"
-          />
-        </div>
-        <div class="titulo-miniatura-boton">
-          <img
-            src="./imagenes/videoteca/(Videoteca) Botón de Muestra con título 1.png"
-            alt="Videoteca"
-            class="boton-de-muestra-titulo"
-          />
-          <img
-            src="./imagenes/videoteca/(Videoteca) Botón de Muestra 1.png"
-            alt="Videoteca"
-            class="boton-de-muestra"
-          />
-        </div>
+        <div id="videos-relacionados"></div>
       </div>
-      <div class="titulos-column">
-        <div class="titulo-item">
-          <img
-            src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
-            alt="Marco"
-            class="titulo-item-fondo"
-          />
-          <div class="titulo-item-texto">Adán</div>
-        </div>
-        <div class="titulo-item">
-          <img
-            src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
-            alt="Marco"
-            class="titulo-item-fondo"
-          />
-          <div class="titulo-item-texto">Adán Kadmón</div>
-        </div>
-        <div class="titulo-item">
-          <img
-            src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
-            alt="Marco"
-            class="titulo-item-fondo"
-          />
-          <div class="titulo-item-texto">Adapa</div>
-        </div>
-        <div class="titulo-item">
-          <img
-            src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
-            alt="Marco"
-            class="titulo-item-fondo"
-          />
-          <div class="titulo-item-texto">Aura Humana</div>
-        </div>
-        <div class="titulo-item">
-          <img
-            src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
-            alt="Marco"
-            class="titulo-item-fondo"
-          />
-          <div class="titulo-item-texto">Aura (Colores)</div>
-        </div>
-        <div class="titulo-item">
-          <img
-            src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
-            alt="Marco"
-            class="titulo-item-fondo"
-          />
-          <div class="titulo-item-texto">Adán Kadmón</div>
-        </div>
-        <div class="titulo-item">
-          <img
-            src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
-            alt="Marco"
-            class="titulo-item-fondo"
-          />
-          <div class="titulo-item-texto">Aura (Colores)</div>
-        </div>
-        <div class="titulo-item">
-          <img
-            src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
-            alt="Marco"
-            class="titulo-item-fondo"
-          />
-          <div class="titulo-item-texto">Adapa</div>
-        </div>
-        <div class="titulo-item">
-          <img
-            src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
-            alt="Marco"
-            class="titulo-item-fondo"
-          />
-          <div class="titulo-item-texto">Aura Humana</div>
-        </div>
-        <div class="titulo-item">
-          <img
-            src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
-            alt="Marco"
-            class="titulo-item-fondo"
-          />
-          <div class="titulo-item-texto">Adán</div>
-        </div>
-        <div class="titulo-item">
-          <img
-            src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
-            alt="Marco"
-            class="titulo-item-fondo"
-          />
-          <div class="titulo-item-texto">Aura (Colores)</div>
-        </div>
-        <div class="titulo-item">
-          <img
-            src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
-            alt="Marco"
-            class="titulo-item-fondo"
-          />
-          <div class="titulo-item-texto">Aura Humana</div>
-        </div>
-        <div class="titulo-item">
-          <img
-            src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
-            alt="Marco"
-            class="titulo-item-fondo"
-          />
-          <div class="titulo-item-texto">Adapa</div>
-        </div>
-        <div class="titulo-item">
-          <img
-            src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
-            alt="Marco"
-            class="titulo-item-fondo"
-          />
-          <div class="titulo-item-texto">Adán Kadmón</div>
-        </div>
-      </div>
+
+      <div class="titulos-column" id="titulos-column"></div>
     </div>
+
+    <script src="./scripts/videoteca.js"></script>
   </body>
 </html>

@@ -1,40 +1,42 @@
 const data = {
-  adan: [
+  adan: [],
+  "adan-kadmon": [],
+  "ADN-basura": [],
+  "ADN-extraterrestre": [],
+  adapa: [],
+  "aura-de-objetos": [],
+  "aura-humana": [
     {
-      titulo: "Adán - Video 1",
-      miniatura: "./imagenes/documentales/miniatura2.png",
+      titulo: "La Fenomenología de los Biofotones (La Luz de nuestro Ser)",
+      miniatura:
+        "./imagenes/videoteca/(Videoteca) Botón de Muestra con título 3.png",
       video:
         "./videos/videoteca/La Fenomenología de los Biofotones (La Luz de nuestro Ser) (corto).mp4",
     },
     {
-      titulo: "Adán - Video 2",
-      miniatura: "./imagenes/documentales/miniatura2.png",
+      titulo: "Perfiles de El Aura Humana",
+      miniatura:
+        "./imagenes/videoteca/(Videoteca) Botón de Muestra con título 2.png",
+      video: "./videos/videoteca/Perfiles de El Aura Humana.mp4",
+    },
+    {
+      titulo: "La Cámara Kirlian y sus interesantes revelaciones",
+      miniatura:
+        "./imagenes/videoteca/(Videoteca) Botón de Muestra con título 1.png",
       video:
         "./videos/videoteca/La Cámara Kirlian y sus interesantes revelaciones (corto).mp4",
     },
-  ],
-
-  "adan-kadmon": [
     {
-      titulo: "Adán Kadmón - Video 1",
-      miniatura: "./imagenes/videoteca/thumb4.png",
-      video: "./videos/videoteca/Perfiles de El Aura Humana.mp4",
-    },
-  ],
-
-  adapa: [
-    {
-      titulo: "Adapa - Video 2",
-      miniatura: "./imagenes/videoteca/thumb8.png",
+      titulo: "La fotografía Kirlian, la Imagen del Aura",
+      miniatura:
+        "./imagenes/videoteca/(Videoteca) Botón de Muestra con título 4.png",
       video:
-        "./videos/videoteca/La Fenomenología de los Biofotones (La Luz de nuestro Ser) (corto).mp4",
-    },
-    {
-      titulo: "Adapa - Video 1",
-      miniatura: "./imagenes/videoteca/thumb7.png",
-      video: "./videos/videoteca/Perfiles de El Aura Humana.mp4",
+        "./videos/videoteca/La fotografía Kirlian, la Imagen del Aura (corto).mp4",
     },
   ],
+  "aura-colores": [],
+  "aura-chakras": [],
+  "aura-caracteres": [],
 };
 
 const contenedorVideos = document.getElementById("videos-relacionados");
@@ -99,21 +101,9 @@ function cargarVideosRelacionados(videos) {
   contenedorVideos.innerHTML = "";
 
   videos.forEach((v, index) => {
-    /*contenedorVideos.innerHTML += `
-      <div class="titulo-miniatura-boton">
-        <div class="titulo-del-video">${v.titulo}</div>
-
-        <img 
-          src="${v.miniatura}"
-          class="boton-de-muestra"
-          data-index="${index}"
-          data-video="${v.video}"
-        >
-      </div>
-    `;*/
     contenedorVideos.innerHTML += `
       <div class="titulo-miniatura-boton">
-          <img src="./imagenes/videoteca/(Videoteca) Botón de Muestra con título 1.png" class="boton-de-muestra-titulo">
+          <img src="${v.miniatura}" class="boton-de-muestra-titulo">
 
           <img 
             src="./imagenes/videoteca/(Videoteca) Botón de Muestra 1.png"

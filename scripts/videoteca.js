@@ -2,8 +2,6 @@ const data = {
   adan: [],
   "adan-kadmon": [],
   "ADN-basura": [],
-  "ADN-extraterrestre": [],
-  adapa: [],
   "aura-de-objetos": [],
   "aura-humana": [
     {
@@ -37,6 +35,8 @@ const data = {
   "aura-colores": [],
   "aura-chakras": [],
   "aura-caracteres": [],
+  "ADN-extraterrestre": [],
+  adapa: [],
 };
 
 const contenedorVideos = document.getElementById("videos-relacionados");
@@ -53,8 +53,10 @@ let indiceVideoActual = 0;
 function generarTitulos() {
   contenedorTitulos.innerHTML = "";
 
-  Object.keys(data).forEach((clave) => {
-    contenedorTitulos.innerHTML += `
+  Object.keys(data)
+    .sort((a, b) => a.localeCompare(b))
+    .forEach((clave) => {
+      contenedorTitulos.innerHTML += `
       <div class="titulo-item" data-titulo="${clave}">
         <img
           src="./imagenes/videoteca/44-Botón Base para Títulos Videoteca.png"
@@ -63,7 +65,7 @@ function generarTitulos() {
         <div class="titulo-item-texto">${formatearTitulo(clave)}</div>
       </div>
     `;
-  });
+    });
 
   activarClicksTitulos();
 }
@@ -99,6 +101,7 @@ function activarClicksTitulos() {
 // -------------------------------------------------------------
 function cargarVideosRelacionados(videos) {
   contenedorVideos.innerHTML = "";
+  videos.sort((a, b) => a.titulo.localeCompare(b.titulo));
 
   videos.forEach((v, index) => {
     contenedorVideos.innerHTML += `
@@ -135,6 +138,7 @@ function activarClicksMiniaturas() {
   document.querySelectorAll("[data-video]").forEach((mini) => {
     mini.addEventListener("click", () => {
       const url = mini.dataset.video;
+      indiceVideoActual = parseInt(mini.dataset.index);
       videoPlayer.classList.add("fading");
 
       setTimeout(() => {

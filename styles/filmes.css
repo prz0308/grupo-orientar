@@ -1,0 +1,64 @@
+.filmes-column {
+  position: absolute;
+  top: 10%;
+  right: 0.7%;
+  width: 20%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  z-index: 10;
+  gap: 0.5%;
+}
+
+.filmes-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.filmes-item-boton {
+  width: 80%;
+  display: block;
+}
+
+.titulo-filmes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 66%;
+  color: black;
+  font-weight: bold;
+  font-size: 1vw;
+  pointer-events: none;
+}
+
+.filmes-item.selected .titulo-filmes {
+  color: #7a3fff;
+}
+
+.main-display-filmes {
+  position: absolute;
+  width: 75.5%;
+  height: 74.7%;
+  top: 57%;
+  left: 41.15%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: black;
+  border-radius: 1%;
+}
+
+#player-filmes {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  border-radius: 2%;
+}
+
+#player-filmes.fading {
+  opacity: 0;
+}

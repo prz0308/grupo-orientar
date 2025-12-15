@@ -17,11 +17,13 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .infoseries-item-boton {
   width: 80%;
   display: block;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .titulo-infoseries {
@@ -37,6 +39,24 @@
   pointer-events: none;
   font-family: sans-serif;
   text-shadow: 0.11em 0.11em 0.11em black;
+}
+
+.infoseries-item:hover .infoseries-item-boton {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+.infoseries-item:hover .titulo-infoseries {
+  transform: translate(-50%, -50%) scale(1.05);
+  filter: brightness(1.05);
+}
+
+.infoseries-item:active .infoseries-item-boton {
+  transform: scale(0.97);
+}
+
+.infoseries-item:active .titulo-infoseries {
+  transform: translate(-50%, -50%) scale(0.97);
 }
 
 .infoseries-item.selected .titulo-infoseries {

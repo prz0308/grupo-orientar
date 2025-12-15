@@ -17,11 +17,13 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .filmes-item-boton {
   width: 80%;
   display: block;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .titulo-filmes {
@@ -37,6 +39,24 @@
   pointer-events: none;
   font-family: sans-serif;
   text-shadow: 0.11em 0.11em 0.11em black;
+}
+
+.filmes-item:hover .filmes-item-boton {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+.filmes-item:hover .titulo-filmes {
+  transform: translate(-50%, -50%) scale(1.05);
+  filter: brightness(1.05);
+}
+
+.filmes-item:active .filmes-item-boton {
+  transform: scale(0.97);
+}
+
+.filmes-item:active .titulo-filmes {
+  transform: translate(-50%, -50%) scale(0.97);
 }
 
 .filmes-item.selected .titulo-filmes {

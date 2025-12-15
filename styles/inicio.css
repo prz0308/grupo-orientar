@@ -4,6 +4,7 @@
   height: auto;
   top: 32%;
   left: 15%;
+  transition: transform 0.2s ease, filter 0.2s ease;
   transform: translate(-50%, -50%);
 }
 
@@ -13,6 +14,7 @@
   height: auto;
   top: 43%;
   left: 15%;
+  transition: transform 0.2s ease, filter 0.2s ease;
   transform: translate(-50%, -50%);
 }
 
@@ -22,6 +24,7 @@
   height: auto;
   top: 54%;
   left: 15%;
+  transition: transform 0.2s ease, filter 0.2s ease;
   transform: translate(-50%, -50%);
 }
 
@@ -29,8 +32,9 @@
   position: absolute;
   width: 13%;
   height: auto;
-  top: 65%;
+  top: 65.5%;
   left: 15%;
+  transition: transform 0.2s ease, filter 0.2s ease;
   transform: translate(-50%, -50%);
 }
 
@@ -40,6 +44,7 @@
   height: auto;
   top: 77%;
   left: 15%;
+  transition: transform 0.2s ease, filter 0.2s ease;
   transform: translate(-50%, -50%);
 }
 
@@ -58,6 +63,15 @@
 .boton-inicio-cuatro:hover,
 .boton-inicio-cinco:hover {
   transform: translate(-50%, -50%) scale(1.1);
+  filter: brightness(1.15);
+}
+
+.boton-inicio-uno:active,
+.boton-inicio-dos:active,
+.boton-inicio-tres:active,
+.boton-inicio-cuatro:active,
+.boton-inicio-cinco:active {
+  transform: translate(-50%, -50%) scale(0.97);
 }
 
 .texto-inicio-uno {
@@ -104,3 +118,7 @@
   left: 27.5%;
   transform: translate(-50%, -50%);
 }
+
+/*.texto-inicio-uno:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}*/

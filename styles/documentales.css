@@ -81,6 +81,7 @@
   left: 26.3%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-anterior {
@@ -91,6 +92,7 @@
   left: 29.3%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-pausa {
@@ -101,6 +103,7 @@
   left: 32.5%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-play {
@@ -111,6 +114,7 @@
   left: 36.5%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-repetir {
@@ -121,6 +125,7 @@
   left: 40.5%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-siguiente {
@@ -131,6 +136,7 @@
   left: 44%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-stop:hover,
@@ -140,6 +146,16 @@
 .boton-repetir:hover,
 .boton-siguiente:hover {
   transform: translate(-50%, -50%) scale(1.1);
+  filter: brightness(1.15);
+}
+
+.boton-stop:active,
+.boton-anterior:active,
+.boton-pausa:active,
+.boton-play:active,
+.boton-repetir:active,
+.boton-siguiente:active {
+  transform: translate(-50%, -50%) scale(0.97);
 }
 
 #player {

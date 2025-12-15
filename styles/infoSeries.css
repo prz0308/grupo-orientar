@@ -31,16 +31,16 @@
   transform: translate(-50%, -50%);
   text-align: center;
   width: 66%;
-  color: black;
+  color: white;
   font-weight: bold;
   font-size: 1vw;
   pointer-events: none;
+  font-family: sans-serif;
+  text-shadow: 0.11em 0.11em 0.11em black;
 }
 
-/**/
-
 .infoseries-item.selected .titulo-infoseries {
-  color: #7a3fff;
+  color: #ffd700;
 }
 
 .main-display-infoseries {

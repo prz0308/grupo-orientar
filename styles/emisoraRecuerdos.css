@@ -1,0 +1,60 @@
+/* BOTÓN GENERAL */
+.boton {
+  position: absolute;
+  width: 11%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* EFECTOS */
+.boton:hover {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+}
+
+.boton:active {
+  transform: scale(0.97);
+}
+
+/* BOTONES */
+.boton-uno {
+  top: 10.5%;
+  left: 21.5%;
+}
+.boton-dos {
+  top: 25.5%;
+  left: 21.5%;
+}
+.boton-tres {
+  top: 40.5%;
+  left: 21.5%;
+}
+.boton-cuatro {
+  top: 56%;
+  left: 21.5%;
+}
+.boton-cinco {
+  top: 71.5%;
+  left: 21.5%;
+}
+.boton-seis {
+  top: 10.5%;
+  left: 53%;
+}
+.boton-siete {
+  top: 25.5%;
+  left: 53%;
+}
+.boton-ocho {
+  top: 40.5%;
+  left: 53%;
+}
+.boton-nueve {
+  top: 56%;
+  left: 53%;
+}
+.boton-diez {
+  top: 71.5%;
+  left: 53%;
+}

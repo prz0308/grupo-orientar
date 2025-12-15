@@ -16,10 +16,16 @@
   /*flex: 0 0 auto;*/
   aspect-ratio: 6 / 1;
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .titulo-item:hover {
   transform: scale(1.02);
+  filter: brightness(1.15);
+}
+
+.titulo-item:active {
+  transform: scale(0.99);
 }
 
 .titulo-item-fondo {
@@ -79,10 +85,16 @@
   width: 24%;
   height: auto;
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-de-muestra:hover {
   transform: scale(1.05);
+  filter: brightness(1.15);
+}
+
+.boton-de-muestra:active {
+  transform: scale(0.97);
 }
 
 .main-display {
@@ -119,6 +131,7 @@
   left: 22%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-anterior {
@@ -129,6 +142,7 @@
   left: 24.4%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-pausa {
@@ -139,6 +153,7 @@
   left: 27.3%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-play {
@@ -149,6 +164,7 @@
   left: 30.7%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-repetir {
@@ -159,6 +175,7 @@
   left: 34.2%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-siguiente {
@@ -169,6 +186,7 @@
   left: 37.2%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-stop:hover,
@@ -178,6 +196,16 @@
 .boton-repetir:hover,
 .boton-siguiente:hover {
   transform: translate(-50%, -50%) scale(1.1);
+  filter: brightness(1.15);
+}
+
+.boton-stop:active,
+.boton-anterior:active,
+.boton-pausa:active,
+.boton-play:active,
+.boton-repetir:active,
+.boton-siguiente:active {
+  transform: translate(-50%, -50%) scale(0.97);
 }
 
 .titulo-item.selected .titulo-item-texto {

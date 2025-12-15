@@ -1,26 +1,48 @@
 .boton-canal-dos {
   position: absolute;
-  width: 28%;
+  width: 23%;
   height: auto;
-  top: 28%;
-  left: 68%;
+  top: 16.5%;
+  left: 65.5%;
   transform: translate(-50%, -50%);
   z-index: 10;
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-uruvision {
   position: absolute;
-  width: 28%;
+  width: 23%;
   height: auto;
-  top: 62%;
-  left: 68%;
+  top: 41%;
+  left: 65.5%;
   transform: translate(-50%, -50%);
   z-index: 10;
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.boton-emisora {
+  position: absolute;
+  width: 19%;
+  height: auto;
+  top: 65%;
+  left: 65.5%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .boton-canal-dos:hover,
-.boton-uruvision:hover {
-  transform: translate(-50%, -50%) scale(1.1);
+.boton-uruvision:hover,
+.boton-emisora:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  filter: brightness(1.15);
+}
+
+.boton-canal-dos:active,
+.boton-uruvision:active,
+.boton-emisora:active {
+  transform: translate(-50%, -50%) scale(0.97);
 }

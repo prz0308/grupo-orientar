@@ -5,7 +5,7 @@ const filmes = [
   },
   {
     video: "./videos/documentales/304330_small.mp4",
-    titulo: "Mansajes del Agua (Masaro Emoto)",
+    titulo: "Mensajes del Agua (Masaro Emoto)",
   },
   {
     video: "./videos/documentales/236711_small.mp4",

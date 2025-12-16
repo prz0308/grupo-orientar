@@ -1,3 +1,37 @@
+.logo-chico {
+  position: absolute;
+  width: 5%;
+  height: auto;
+  top: 6.7%;
+  right: 1%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.logo-chico:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  filter: brightness(1.05);
+}
+
+.logo-chico:active {
+  transform: translate(-50%, -50%) scale(0.97);
+}
+
+.inicio-texto {
+  position: absolute;
+  top: 5.5%;
+  right: 0.5%;
+  z-index: 10;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+  text-shadow: 0.08em 0.08em 0 black;
+}
+
 .filmes-column {
   position: absolute;
   top: 10%;
